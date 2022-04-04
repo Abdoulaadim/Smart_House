@@ -1,0 +1,341 @@
+{
+  "House": [
+    {
+      "id": 1,
+      "name": "Maison1",
+      "address": "address1",
+      "floors": [
+        {}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Maison2",
+      "address": "address22"
+    },
+    {
+      "id": 3,
+      "name": "Maison3",
+      "address": "address3"
+    },
+    {
+      "id": 5,
+      "name": "Maison5",
+      "address": "address5"
+    },
+    {
+      "name": "Maison 6",
+      "address": "address 6",
+      "id": 6
+    }
+  ],
+  "floors": [
+    {
+      "number": 5,
+      "house": {
+        "name": "Maison 7",
+        "address": "address 7",
+        "id": 7
+      },
+      "id": 1
+    },
+    {
+      "number": 1,
+      "house": {
+        "id": 1,
+        "name": "Maison1",
+        "address": "address1",
+        "floors": [
+          {}
+        ]
+      },
+      "id": 2
+    },
+    {
+      "number": 2,
+      "house": {
+        "id": 2,
+        "name": "Maison2",
+        "address": "address2"
+      },
+      "id": 3
+    },
+    {
+      "number": 3,
+      "house": {
+        "id": 3,
+        "name": "Maison3",
+        "address": "address3"
+      },
+      "id": 4
+    },
+    {
+      "number": 4,
+      "house": {
+        "id": 4,
+        "name": "Maison4",
+        "address": "address4"
+      },
+      "id": 5
+    },
+    {
+      "number": 5,
+      "house": {
+        "id": 5,
+        "name": "Maison5",
+        "address": "address5"
+      },
+      "id": 6
+    }
+  ],
+  "Room": [
+    {
+      "number": 1,
+      "floor": {
+        "id": "4",
+        "number": "4",
+        "house": {
+          "id": 1,
+          "name": "Maison2",
+          "address": "address2"
+        }
+      },
+      "id": 1
+    },
+    {
+      "number": 1,
+      "floor": {
+        "number": 1,
+        "house": {
+          "id": 1,
+          "name": "Maison1",
+          "address": "address1",
+          "floors": [
+            {}
+          ]
+        },
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "number": 2,
+      "floor": {
+        "number": 2,
+        "house": {
+          "id": 2,
+          "name": "Maison2",
+          "address": "address2"
+        },
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "number": 3,
+      "floor": {
+        "number": 3,
+        "house": {
+          "id": 3,
+          "name": "Maison3",
+          "address": "address3"
+        },
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "number": 4,
+      "floor": {
+        "number": 4,
+        "house": {
+          "id": 4,
+          "name": "Maison4",
+          "address": "address4"
+        },
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "number": 5,
+      "floor": {
+        "number": 5,
+        "house": {
+          "id": 5,
+          "name": "Maison5",
+          "address": "address5"
+        },
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "number": 5,
+      "floor": {
+        "number": 5,
+        "house": {
+          "id": 5,
+          "name": "Maison5",
+          "address": "address5"
+        },
+        "id": 6
+      },
+      "id": 7
+    }
+  ],
+  "Device": [
+    {
+      "name": "TV1",
+      "status": "OFF",
+      "room": {
+        "number": 1,
+        "floor": {
+          "number": 1,
+          "house": {
+            "id": 1,
+            "name": "Maison1",
+            "address": "address1",
+            "floors": [
+              {}
+            ]
+          },
+          "id": 2
+        },
+        "id": 2
+      },
+      "id": 1
+    },
+    {
+      "status": "ON",
+      "room": {
+        "number": 1,
+        "floor": {
+          "number": 1,
+          "house": {
+            "id": 1,
+            "name": "Maison1",
+            "address": "address1",
+            "floors": [
+              {}
+            ]
+          },
+          "id": 2
+        },
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "name": "",
+      "status": "OFF",
+      "room": {
+        "number": 3,
+        "floor": {
+          "number": 3,
+          "house": {
+            "id": 3,
+            "name": "Maison3",
+            "address": "address3"
+          },
+          "id": 4
+        },
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "name": "",
+      "status": "ON",
+      "room": {
+        "number": 2,
+        "floor": {
+          "number": 2,
+          "house": {
+            "id": 2,
+            "name": "Maison2",
+            "address": "address2"
+          },
+          "id": 3
+        },
+        "id": 3
+      },
+      "id": 5
+    },
+    {
+      "name": "TV2",
+      "status": "OFF",
+      "room": {
+        "number": 3,
+        "floor": {
+          "number": 3,
+          "house": {
+            "id": 3,
+            "name": "Maison3",
+            "address": "address3"
+          },
+          "id": 4
+        },
+        "id": 4
+      },
+      "id": 6
+    },
+    {
+      "room": {
+        "number": 1,
+        "floor": {
+          "number": 1,
+          "house": {
+            "id": 1,
+            "name": "Maison1",
+            "address": "address1",
+            "floors": [
+              {}
+            ]
+          },
+          "id": 2
+        },
+        "id": 2
+      },
+      "name": "TV",
+      "status": "ON",
+      "id": 7
+    },
+    {
+      "name": "nnn",
+      "status": "ON",
+      "room": {
+        "number": 3,
+        "floor": {
+          "number": 3,
+          "house": {
+            "id": 3,
+            "name": "Maison3",
+            "address": "address3"
+          },
+          "id": 4
+        },
+        "id": 4
+      },
+      "id": 8
+    },
+    {
+      "name": "HHG434334",
+      "status": "ON",
+      "room": {
+        "number": 3,
+        "floor": {
+          "number": 3,
+          "house": {
+            "id": 3,
+            "name": "Maison3",
+            "address": "address3"
+          },
+          "id": 4
+        },
+        "id": 4
+      },
+      "id": 9
+    }
+  ]
+}

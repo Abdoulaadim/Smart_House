@@ -1,0 +1,99 @@
+<div class="row center-align ">
+    <div class="col s6 m6 offset-s4 offset-m3">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <label>Status</label>
+                    <select class="browser-default" id="id_house" [(ngModel)]="room" name="id_house">
+                      <option *ngFor="let room of roomes"  [ngValue]="room">{{room.floor.number}}</option>  
+                    </select>
+                </div>
+                <div class="row">
+                    <label>Status</label>
+                    <select class="browser-default" id="id_house" [(ngModel)]="room" name="id_house">
+                      <option *ngFor="let room of roomes"  [ngValue]="room">{{room.number}}</option>  
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input [(ngModel)]="device.name" id="name" name="name" type="text" class="validate">
+                        <label for="last_name">Name Device</label>
+                    </div>
+
+                    <label>Status</label>
+                    <select class="browser-default" id="status" [(ngModel)]="device.status" name="status">
+                      <option value="" disabled selected>Choisir</option>
+                      <option value="ON" selected>ON</option> 
+                      <option value="OFF" selected>OFF</option> 
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="section">
+            <div class="col s6 offset-s8">
+                <button (click)="createDevice()" *ngIf="statuss" class="btn waves-effect waves-teal blue accent-4">Ajouter</button>
+                <button (click)="updateDevice()" *ngIf="!statuss" class="btn waves-effect waves-teal brown darken-2">Update</button>
+            </div>
+        </div>
+        <br>
+        <div class="section">
+            <!-- <div class="row " *ngFor="let device of devices">
+
+
+                <div [ngClass]="{'green lighten-2':device.status ==='ON','deep-orange accent-2':device.status ==='OFF'}">
+                    <div class="card-content ">
+                        <br>
+                        <span class="card-title">{{device.name}}</span>
+                        <p></p>
+                    </div>
+                    <br>
+                    <div class="card-action">
+                        <a href="http://www.freetimelearning.com" target="_blank">{{device.status}}</a>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="card-action">
+                        <button class="btn waves-effect waves-light" (click)="editPost(device)" style="margin-right: 15px;" type="submit" name="action">update
+                        
+                      </button>
+                        <button class="btn red waves-effect  waves-purple" (click)="Delete(device)" type="submit" name="action">Delete
+                        
+                      </button>
+                    </div>
+                    <br>
+                </div>
+
+
+            </div>
+        </div> -->
+        </div>
+    </div>
+    <div class="row center-align ">
+        <div class="col s6 m6 offset-s4 offset-m3">
+            <div class="row">
+
+                <ul class="collection" *ngFor="let device of devices">
+                    <li class="collection-item avatar" [ngClass]="{'light-green accent-3':device.status ==='ON','red accent-4':device.status ==='OFF'}">
+                        <i class="material-icons circle green " (click)="changeStatus(device)" *ngIf="device.status ==='ON'">play_circle_outline</i>
+                        <i class="material-icons circle red" (click)="changeStatus(device)" *ngIf="device.status ==='OFF'">power_settings_new  </i>
+                        <br>
+                        <p><span class="title"> Device : <strong>{{device.name}}</strong></span></p>
+                        <br>
+                        <p> status : <strong>{{device.status}}</strong> <br> </p>
+                        <p> Floor number : <strong>{{device.room.floor.number}}</strong> <br></p>
+                        <p> Room nmber : <strong>{{device.room.floor.number}}</strong> <br></p>
+                        <p> House name : <strong>{{device.room.floor.house.name}}</strong> <br></p>
+
+                        <br>
+                        <br>
+                        <div>
+                            <i class="material-icons  " (click)="editPost(device)">loop</i>
+                            <i class=" material-icons " (click)="Delete(device) ">delete</i>
+                        </div>
+                        <br>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

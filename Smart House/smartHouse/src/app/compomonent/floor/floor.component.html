@@ -1,0 +1,42 @@
+<div class="row center-align ">
+    <div class="col s6 m6 offset-s4 offset-m3">
+        <form class="col s12">
+            <div class="row">
+                <label>Status</label>
+                <select class="browser-default" id="id_house" [(ngModel)]="house" name="id_house">
+                  <option *ngFor="let house of houses"  [ngValue]="house">{{house.name}}</option>  
+                </select>
+
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input [(ngModel)]="floor.number" id="number" name="number" type="number" class="validate">
+                    <label for="number">Floor number</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </form>
+        <div class="section">
+            <div class="col s6 offset-s8" style="margin-bottom:43px">
+                <button class="btn waves-effect waves-teal blue accent-4" *ngIf="statuss" (click)="createFloor()">Ajouter</button>
+                <button class="btn waves-effect waves-teal brown darken-2" *ngIf="!statuss" (click)="updateFloor()">Update</button>
+            </div>
+        </div>
+
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h5>Floor</h5>
+            </li>
+            <li class="collection-item" *ngFor="let floorx of floores">
+                <div><br>Floor : {{floorx.number}}<br> House name : {{floorx.house.name}} <br>House address : {{floorx.house.address}} <br><i class="material-icons secondary-content" (click)="DeleteFloor(floorx)">delete</i>
+                    <i class="material-icons secondary-content" (click)="editFloor(floorx)">loop</i>
+
+
+                    <br>
+
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
